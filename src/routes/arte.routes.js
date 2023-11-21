@@ -1,5 +1,5 @@
 import { Router } from "express"
-import { getTodasArtes, getArtesByid, criarArtes, editarArtes, deletarArte, buscarporObra, buscarporTipo } from ""
+import { getTodasArtes, getArtesByid, criarArtes, editarArtes, deletarArte, buscarporObra, buscarporTipo } from "../controllers/artes.controller.js"
 
 const rotasArtes = Router();
 
