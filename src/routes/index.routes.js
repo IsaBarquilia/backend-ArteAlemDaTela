@@ -3,6 +3,7 @@ import rotasArtes from "./arte.routes.js";
 
 const router = Router()
 
+
 router.use("/artes", rotasArtes); //Rota para puxar as artes
 
 router.get("/", (req, res) => {

@@ -3,18 +3,13 @@ import { getTodasArtes, getArtesByid, criarArtes, editarArtes, deletarArte, busc
 
 const rotasArtes = Router(); 
 
-rotasArtes.get("/", getTodasArtes); //Rota para puxar todas as obras
+rotasArtes.get("/", getTodasArtes);
+rotasArtes.get("/:id", getArtesByid);
+rotasArtes.post("/", criarArtes);
+rotasArtes.put("/:id", editarArtes);
+rotasArtes.delete("/:id", deletarArte);
+rotasArtes.get("/:obra", buscarporObra);
+rotasArtes.get("/:tipo", buscarporTipo);
 
-rotasArtes.get("/:id", getArtesByid); //Rota para puxar apenas a obra do id solicitado
-
-rotasArtes.post("/", criarArtes); //Rota para criar mais obras
-
-rotasArtes.put("/:id", editarArtes); //Rota para conseguir editar apenas a obra do id solicitado
-
-rotasArtes.delete("/:id", deletarArte); //Rota para conseguir deletar apenas a obra do id solicitado
-
-rotasArtes.get("/:obra", buscarporObra); //Rota para conseguir buscar pelo nome da obra
-
-rotasArtes.get("/:tipo", buscarporTipo); //Rota para conseguir puxar apenas a obra do tipo digitado
 
 export default rotasArtes;
