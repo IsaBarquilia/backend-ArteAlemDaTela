@@ -48,7 +48,47 @@ export const adicionarIntegrantes = (req, res) => {
         return res.status(400).send({message:"Imagem inválida"});
     }
 
-    const integrantes = list.adicionarIntegrantes(nome, idade, imagem)
+    const integrantes = sobre.adicionarIntegrantes(nome, idade, imagem)
         return res.status(200).send(integrantes);
     
+}
+
+//deletar integrante
+export const deletarIntegrante = (req, res) => {
+    const {id} = req.params;
+
+    const integrantes = sobre.deletarIntegrante(id);
+
+    if(!integrantes){
+        return res.status(404).send({message:"Integrante não encontrado"});
+    }
+
+    sobre.deletarIntegrante(id);
+
+    return res.status(200).send(integrantes);
+}
+
+//editar integrante
+
+export const editarIntegrante = (req, res) => {
+
+    const {id} = req.params;
+    const {nome, idade, imagem} = req.body;
+    const sobre1 = sobre.getIntegrantesByid(id);
+
+    if(!nome || !idade || !imagem){
+        return res.status(400).send({message:"Dados inválidos"});
+    }
+
+    if(!verificaimg(imagem)){
+        return res.status(400).send({message:"Imagem inválida"});
+    }
+
+    const integrantes = sobre.editarIntegrante(id, nome, idade, imagem);
+
+    if(!integrantes){
+        return res.status(404).send({message:"Integrante não encontrado"});
+    }
+
+    return res.status(200).send(integrantes);
 }
