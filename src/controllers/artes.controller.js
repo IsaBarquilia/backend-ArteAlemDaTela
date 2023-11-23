@@ -1,6 +1,10 @@
 import resgataArtes from "../models/ArteList.js"
+
+
 import Arte from "../models/arte.js"
 const arteLista = new resgataArtes()
+
+
 
 //Função de verificação de imagem
 function verifyImage(url) {
