@@ -102,10 +102,16 @@ export const criarArtes = (req, res) => {
     return res.status(201).send(arte);
   }
 };
+
 export const dataProducao = (req, res) => {
   const { dataProducao } = req.params;
   const arteProducao = arteLista.dataProducao(dataProducao);
-  if (!arteProducao) res.status(404).send({ message: "arte não encontrada!" });
+  if (!arteProducao)
+    res
+      .status(404)
+      .send({
+        message: "arte não encontrada!"
+      });
   return res.send(arteProducao);
 }
 
