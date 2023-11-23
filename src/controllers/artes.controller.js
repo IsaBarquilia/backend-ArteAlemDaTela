@@ -1,4 +1,4 @@
-import {resgataArtes} from "../models/ArteList.js"
+import resgataArtes from "../models/ArteList.js"
 
 const arte = new resgataArtes()
 
