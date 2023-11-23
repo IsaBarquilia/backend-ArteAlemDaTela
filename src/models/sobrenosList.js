@@ -27,8 +27,5 @@ class sobreNos {
     deletarIntegrante(id) {
         this.listIntegrantes = this.listIntegrantes.filter((integrantes) => integrantes.id != id)
     }
-    buscarporNome(nome){
-        return this.listIntegrantes.filter((integrantes)=>integrantes.nome.toLowerCase() == nome.toLowerCase());
-    }
 }
 export default sobreNos;
