@@ -49,7 +49,14 @@ export const getIntegrantesByid = (req, res) => {
     if(!verificaimg(imagem)){
         return res.status(400).send({message:"Imagem inválida"});
     }
-
+//verifica numero de caracteres do nome
+    if(nome.length < 3 || nome.length > 30){
+        return res.status(400).send({message:"Nome deve conter entre 3 e 30 caracteres"});
+    }
+//verifica idade
+    if(idade < 0 ){
+    return res.status(400).send({message:"Idade Inválida"});
+}
     const integrantes = sobre.adicionarIntegrantes(nome, idade, imagem)
         return res.status(200).send(integrantes);
     
@@ -96,3 +103,4 @@ export const editarIntegrante = (req, res) => {
 
     return res.status(200).send(integrantes);
 }
+
