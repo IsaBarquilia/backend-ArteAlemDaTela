@@ -3,8 +3,6 @@ import rotasArtes from "./arte.routes.js";
 import rotasSobreNos from "./sobrenos.routes.js"
 
 const router = Router()
-
-
 router.use("/artes", rotasArtes); //Rota para puxar as artes
 router.use("/sobrenos", rotasSobreNos); //Rota para puxar os integrantes
 
