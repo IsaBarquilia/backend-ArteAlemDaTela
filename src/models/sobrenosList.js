@@ -2,7 +2,7 @@
 
 class sobreNos {
     constructor() {
-        this.listIntegrantes = []
+        this.listIntegrantes = [] //criação do array
     }
     getTodosIntegrantes() {
         return this.listIntegrantes;
