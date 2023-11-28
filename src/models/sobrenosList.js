@@ -1,3 +1,4 @@
+import {v4 as uuidv4} from "uuid";
 //Lista sobre nós com os integrantes
 
 class sobreNos {

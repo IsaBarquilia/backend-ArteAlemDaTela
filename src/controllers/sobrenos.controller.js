@@ -1,15 +1,17 @@
 import sobreNos from "../models/sobrenosList.js"
+import integrantes from "../models/sobrenos.js";
+
 
 const sobre = new sobreNos();
 
-//verificar imagem, só ira funcionar se tiver as tages jpg,jpeg,png,gif ou bmp
-function verificaimg(url){
-    const verifica = ["jpg", "jpeg", "png", "gif", "bmp"];
-
-    const extensao = url.split('.').pop().toLowerCase();
-
-    return verifica.includes(extensao);
-}
+//verificar imagem, só ira funcionar se tiver as tags jpg,jpeg,png,gif ou bmp
+function verifyImage(url) {
+    var allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp'];
+  
+    var extension = url.split('.').pop().toLowerCase();
+  
+    return allowedExtensions.includes(extension);
+  }
 
 //obter todos os integrantes caso nao houver retorna a mensagem que nao ha integrantes cadastrados
 export const getTodosIntegrantes = (req, res) => {
@@ -31,7 +33,7 @@ export const getIntegrantesByid = (req, res) => {
         const integrantes = sobre.getIntegrantesByid(id);
     
         if(!integrantes){
-            return res.status(404).send({message:"Integrante não encontrado"});
+            return res.status(409).send({message:"Integrante não encontrado"});
         }
     
         return res.status(200).send(integrantes);
@@ -41,11 +43,12 @@ export const getIntegrantesByid = (req, res) => {
 
     const {nome, idade, imagem} = req.body;
 
+
     if(!nome || !idade || !imagem){
         return res.status(400).send({message:"Dados inválidos"});
     }
 
-    if(!verificaimg(imagem)){
+    if(!verifyImage(imagem)){
         return res.status(400).send({message:"Imagem inválida"});
     }
 //verifica numero de caracteres do nome
@@ -57,7 +60,7 @@ export const getIntegrantesByid = (req, res) => {
     return res.status(400).send({message:"Idade Inválida"});
 }
     const integrantes = sobre.adicionarIntegrantes(nome, idade, imagem)
-        return res.status(200).send(integrantes);
+        return res.status(201).send(integrantes);
     
 }
 
