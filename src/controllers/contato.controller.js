@@ -31,7 +31,7 @@ export const adicionarArtista = (req, res) => {
 //deletar a mensagem do usuario 
 //deletar integrantes caso o usuario informar id nao cadastrado retorna mensagem de integrante nao encontrado.
 
-export const deletarIntegrante = (req, res) => {
+export const deletarArtista = (req, res) => {
     const {id} = req.params;
 
     const artista = sobre.deletarArtista(id);
