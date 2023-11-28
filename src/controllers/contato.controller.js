@@ -3,15 +3,15 @@ import contato from "../models/contato.js";
 const ctt = new contato();
 
 //funçao verifica nome (maior que dois e menos que 40 algarismos).
-function verificanome(nome){
+export function verificanome(nome){
     if(nome.length < 2 || nome.length > 40){
         return false;
     }
     return true;
 }
 //funcao verifica se o email é valido. 
-function verificaemail(email){
-    const verifica = ["gmail", "hotmail", "outlook", "yahoo", "bol"];
+export function verificaemail(email){
+    const verifica = ["gmail.com", "hotmail", "outlook", "yahoo", "bol"];
     const extensao = email.split('@').pop().toLowerCase();
     return verifica.includes(extensao);
 }
@@ -23,7 +23,7 @@ export const adicionarArtista = (req, res) => {
         return res.status(400).send({message:"Dados inválidos"});
     }
 
-    if(!verificaemail(imagem)){
+    if(!verificaemail(email)){
         return res.status(400).send({message:"Email inválido"});
     }
 }
