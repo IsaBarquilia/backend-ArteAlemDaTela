@@ -9,7 +9,6 @@ function verificaimg(url){
     const extensao = url.split('.').pop().toLowerCase();
 
     return verifica.includes(extensao);
-
 }
 
 //obter todos os integrantes caso nao houver retorna a mensagem que nao ha integrantes cadastrados
