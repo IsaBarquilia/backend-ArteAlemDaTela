@@ -12,7 +12,6 @@ function verifyImage(url) {
 }
 
 //Função de obter todas as artes
-
 export const getTodasArtes = (req, res) => {
   const tipo = req.query.tipo;
   let artes;
