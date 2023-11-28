@@ -12,29 +12,31 @@ function verifyImage(url) {
 }
 
 //Função de obter todas as artes
+
 export const getTodasArtes = (req, res) => {
-
-  let artes = arteLista.getTodasArtes();
-
   const tipo = req.query.tipo;
+  let artes;
 
   if (tipo) {
     artes = arteLista.buscarporTipo(tipo);
     return res.status(200).send({
-      Totaltipo: artes.length, artes
-    })
+      Totaltipo: artes.length,
+      artes
+    });
   } else {
-    arteLista.getTodasArtes();
+    artes = arteLista.getTodasArtes();
   }
-  if (!artes) {
+
+  if (artes.length === 0) {
     return res.status(404).send({
       message: `Não existem artes cadastradas`
-    })
+    });
   }
-  return res.status(200).send({
-    totalArtes: artes.length, artes
-  });
 
+  return res.status(200).send({
+    totalArtes: artes.length,
+    artes
+  });
 };
 
 //Função de obter uma arte por id
@@ -54,24 +56,26 @@ export const buscarArtePorID = (req, res) => {
 export const dataProducao = (req, res) => {
   const { dataProducao } = req.params;
   const arteProducao = arteLista.dataProducao(dataProducao);
-  if (!arteProducao)
-    res
-      .status(404)
-      .send({
-        message: "arte não encontrada!"
-      });
+
+  if (!arteProducao) {
+    return res.status(404).send({
+      message: "Arte não encontrada!"
+    });
+  }
+
   return res.send(arteProducao);
-}
+};
 //Função de criar uma arte
 export const criarArtes = (req, res) => {
-
+  
   const { nomeObra, url, artista, dataProducao, tipo, idadeArtista } = req.body;
   const arte = new Arte(nomeObra, url, artista, dataProducao, tipo, idadeArtista)
-
+  
   let numerosErros = 0;
   let erros = [];
-  console.log(dataProducao)
   console.log(idadeArtista)
+  console.log(dataProducao);
+
   //verificação de todos os campos preenchidos
   if (nomeObra == "" || url == "" || artista == "" || dataProducao == "" || tipo == "" || idadeArtista == "") {
     numerosErros++;
@@ -115,7 +119,7 @@ export const criarArtes = (req, res) => {
   } else {
     arteLista.criarArtes(arte);
     return res.status(201).send(arte);
-  }43
+  }
 };
 
 export const editarArtes = (req, res) => {
@@ -123,12 +127,22 @@ export const editarArtes = (req, res) => {
   const { nomeObra, url, artista, dataProducao, tipo, idadeArtista } = req.body;
   const arteId = arteLista.buscarArtePorID(id);
 
-  if (!arteId) res.status(404).send({ message: "arte não encontrada!" });
-  //Se deu certo, enviar todos os dados para o método no Model
-  arteLista.editarArtes(nomeObra, url, artista, dataProducao, tipo, idadeArtista, id) // Retornar arte atualizado
-  return res.send(arteLista);
-}
+  if (!arteId) {
+    return res.status(404).send({ message: "Arte não encontrada!" });
+  }
 
+  const arteAtualizada = arteLista.editarArtes(
+    nomeObra,
+    url,
+    artista,
+    dataProducao,
+    tipo,
+    idadeArtista,
+    id
+  );
+
+  return res.send(arteAtualizada);
+};
 export const deletarArte = (req, res) => {
   const { id } = req.params;
   const arte = arteLista.buscarArtePorID(id);
@@ -137,4 +151,4 @@ export const deletarArte = (req, res) => {
 
   arteLista.deletarArte(arte);
   return res.send({ message: "arte removida com sucesso!" });
-}
+};
