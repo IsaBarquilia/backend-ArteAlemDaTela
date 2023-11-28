@@ -73,8 +73,6 @@ export const criarArtes = (req, res) => {
   
   let numerosErros = 0;
   let erros = [];
-  console.log(idadeArtista)
-  console.log(dataProducao);
 
   //verificação de todos os campos preenchidos
   if (nomeObra == "" || url == "" || artista == "" || dataProducao == "" || tipo == "" || idadeArtista == "") {
