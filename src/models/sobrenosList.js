@@ -12,7 +12,7 @@ class sobreNos {
         return this.listIntegrantes.find((integrantes) => integrantes.id === id);
     }
     adicionarIntegrantes(integrantes) {
-        this.listIntegrantes.push(integrantes);
+        return this.listIntegrantes.push(integrantes);
     }
     editarIntegrante(nome, idade, imagem) {
 
