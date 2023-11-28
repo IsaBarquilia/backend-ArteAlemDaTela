@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from "uuid";
 //lista de arte e metodos do crud
 class resgataArtes {
     constructor() {
@@ -12,7 +13,7 @@ class resgataArtes {
     criarArtes(artes) {
         this.listArtes.push(artes);
     }
-    editarArtes(nomeObra, url, artista, dataProducao, tipo) {
+    editarArtes(nomeObra, url, artista, dataProducao, tipo, idadeArtista, id) {
 
         const artes = this.buscarArtePorID(id)
         if (artes) {
@@ -21,6 +22,7 @@ class resgataArtes {
             artes.artista = artista;
             artes.dataProducao = dataProducao;
             artes.tipo = tipo;
+            artes.idadeArtista = idadeArtista;
             artes.id = uuidv4()
         }
         return artes

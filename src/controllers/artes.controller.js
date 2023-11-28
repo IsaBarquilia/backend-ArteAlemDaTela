@@ -40,13 +40,28 @@ export const getTodasArtes = (req, res) => {
 //Função de obter uma arte por id
 export const buscarArtePorID = (req, res) => {
   const { id } = req.params;
-  const arte = list.buscarArtePorID(id);
+  const arte = arteLista.buscarArtePorID(id);
 
-  if (!arte) res.status(404).send({ message: "Arte não encontrada!" });
-
-  return res.send(arte);
+  if(arte){
+    return res.status(200).send(arte);
+  }
+  else {
+    return res.status(404).send({
+      message: `Não existe arte com o id ${id}`
+    })
+  }
 };
-
+export const dataProducao = (req, res) => {
+  const { dataProducao } = req.params;
+  const arteProducao = arteLista.dataProducao(dataProducao);
+  if (!arteProducao)
+    res
+      .status(404)
+      .send({
+        message: "arte não encontrada!"
+      });
+  return res.send(arteProducao);
+}
 //Função de criar uma arte
 export const criarArtes = (req, res) => {
 
@@ -100,39 +115,26 @@ export const criarArtes = (req, res) => {
   } else {
     arteLista.criarArtes(arte);
     return res.status(201).send(arte);
-  }
+  }43
 };
-
-export const dataProducao = (req, res) => {
-  const { dataProducao } = req.params;
-  const arteProducao = arteLista.dataProducao(dataProducao);
-  if (!arteProducao)
-    res
-      .status(404)
-      .send({
-        message: "arte não encontrada!"
-      });
-  return res.send(arteProducao);
-}
 
 export const editarArtes = (req, res) => {
   const { id } = req.params;
   const { nomeObra, url, artista, dataProducao, tipo, idadeArtista } = req.body;
-
   const arteId = arteLista.buscarArtePorID(id);
 
   if (!arteId) res.status(404).send({ message: "arte não encontrada!" });
-
   //Se deu certo, enviar todos os dados para o método no Model
-  arteLista.editarArtes(nomeObra, url, artista, dataProducao, tipo, idadeArtista) // Retornar arte atualizado
+  arteLista.editarArtes(nomeObra, url, artista, dataProducao, tipo, idadeArtista, id) // Retornar arte atualizado
   return res.send(arteLista);
 }
+
 export const deletarArte = (req, res) => {
   const { id } = req.params;
-  const arte = arte.buscarArtePorID(id);
+  const arte = arteLista.buscarArtePorID(id);
 
   if (!arte) res.status(404).send({ message: "arte não encontrada!" });
 
-  arte.deletarArte(arte);
+  arteLista.deletarArte(arte);
   return res.send({ message: "arte removida com sucesso!" });
 }
