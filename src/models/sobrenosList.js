@@ -9,7 +9,8 @@ class sobreNos {
         return this.listIntegrantes;
     }
     getIntegrantesByid(id) {
-        return this.listIntegrantes.find((integrantes) => integrantes.id === id);
+        const nos = this.listIntegrantes.find((integrantes) => integrantes.id === id);
+        return nos;
     }
     adicionarIntegrantes(integrantes) {
         return this.listIntegrantes.push(integrantes);
