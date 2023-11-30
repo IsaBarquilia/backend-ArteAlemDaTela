@@ -1,4 +1,4 @@
-todosQuadros = [
+todosQuadros= [
     {
         nomeObra: "Noite estrelada",
         artista: "Van Vogh",
@@ -66,13 +66,30 @@ todosQuadros = [
         dataProducao: "1872",
         tipo: "Tinta a óleo ",
         idadeArtista: "falecido com 86 anos",
-    }
+    }, 
+
     {
-        nomeObra: "Van goghAmendoeira em Flor",
+        nomeObra: "Amendoeira em Flor",
         artista: "Van gogh",
         dataProducao: " 1890",
         tipo: "Tinta a óleo ",
         idadeArtista: "falecido com 37 anos",
+    },
+
+    {
+        nomeObra: "Mona lisa",
+        artista: "Leonardo da vinci",
+        dataProducao: " 1890",
+        tipo: "Tinta a óleo ",
+        idadeArtista: "falecido com 67 anos",
+    }, 
+
+    {
+        nomeObra: "Medusa",
+        artista: "Caravaggio",
+        dataProducao: "  1503",
+        tipo: "Tinta a óleo ",
+        idadeArtista: "falecido com 38 anos",
     }
 
 
