@@ -6,7 +6,7 @@ import {
     editarIntegrante, 
     deletarIntegrante
   } 
-    from "../controllers/sobrenos.controller";
+    from "../controllers/sobrenos.controller.js";
 
     const rotasSobreNos = new Router();
 
