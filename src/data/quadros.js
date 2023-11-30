@@ -1,4 +1,4 @@
-todosQuadros  = [
+const obras =[
     {
         nomeObra: "Noite estrelada",
         URL:"  https://static.todamateria.com.br/upload/an/oi/anoiteestrelada-cke.jpg",
@@ -101,7 +101,8 @@ todosQuadros  = [
         dataProducao: "  1503",
         tipo: "Tinta a óleo ",
         idadeArtista: "falecido com 38 anos",
-    }
+    },
 
 
-]
+];
+export default obras;
