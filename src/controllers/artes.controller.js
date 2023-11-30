@@ -1,5 +1,8 @@
 
+
 import obras from "../data/quadros.js";
+import obras from "../data/obras.js";
+
 import resgataArtes from "../models/ArteList.js"
 import Arte from "../models/arte.js"
 
@@ -154,7 +157,10 @@ export const editarArtes = (req, res) => {
     id
   );
 
-  return res.send(arteAtualizada);
+  return res.send({
+    message: "Arte atualizada!",
+    arteAtualizada
+  });
 };
 export const deletarArte = (req, res) => {
   const { id } = req.params;
