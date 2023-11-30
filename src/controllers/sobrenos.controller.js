@@ -1,7 +1,14 @@
 import { SobreNosList } from "../models/sobrenosList.js";
+import integrantes from "../data/sobreNos.js";
 import { Sobrenos } from "../models/sobrenos.js";
 
 const sobrenosList = new SobreNosList();
+obras.map(integrante => new integrantes(
+integrante.nome,
+integrante.idade,
+integrante.imagem,
+)) .forEach(getIntegrantes => sobrenosList.criarIntegrante(integrantes));
+
 
 function verifyImage(url) {
     var allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp'];
