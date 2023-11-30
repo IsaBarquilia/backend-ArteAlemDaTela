@@ -1,4 +1,4 @@
-todosQuadros= [
+todosQuadros  = [
     {
         nomeObra: "Noite estrelada",
         artista: "Van Vogh",
