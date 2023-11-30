@@ -3,6 +3,14 @@ import { Sobrenos } from "../models/sobrenos.js";
 
 const sobrenosList = new SobreNosList();
 
+function verifyImage(url) {
+    var allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp'];
+  
+    var extension = url.split('.').pop().toLowerCase();
+  
+    return allowedExtensions.includes(extension);
+  }
+
 export const getIntegrantes = (req, res) => {
     const integrantes = sobrenosList.getIntegrantes();
 
@@ -23,11 +31,33 @@ export const getIntegrantePorId = (req, res) => {
 
 export const criarIntegrante = (req, res) => {
     const { nome, idade, imagem } = req.body;
-    const integrante = new Sobrenos(nome, idade, imagem);
+    
 
-    sobrenosList.criarIntegrante(integrante);
 
-    return res.status(201).send(integrante);
+
+    if (nome == "" || idade == "" || imagem == ""){
+        return res.status(400).send({message: "Preencha todos os campos"});
+    }
+    if (nome.length < 3){
+        return res.status(400).send({message:"Digite no minímo 3 caracteres"});
+     }
+
+    if(verifyImage(imagem) == false){
+        return res.status(400).send({message:"Imagem inválida"});
+     }
+
+     if(idade < 16 || idade > 116){
+        return res.status(400).send({message: "Idade minima 16 anos e maxima 117"});
+     }
+     const integrante = new Sobrenos(nome, idade, imagem);
+
+
+        sobrenosList.criarIntegrante(integrante);
+
+        return res.status(201).send(integrante);
+
+
+   
 }
 
 export const editarIntegrante = (req, res) => {
