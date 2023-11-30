@@ -1,6 +1,19 @@
+import obras from "../data/obras.js";
 import resgataArtes from "../models/ArteList.js"
 import Arte from "../models/arte.js"
+
 const arteLista = new resgataArtes()
+
+obras.map(arte => new Arte(
+  arte.nomeObra,
+  arte.url,
+  arte.idadeArtista,
+  arte.artista ,
+  arte.dataProducao,
+  arte.tipo,
+)) .forEach(obras => arteLista.criarArtes(obras));
+
+
 
 //Função de verificação de imagem
 function verifyImage(url) {
