@@ -138,7 +138,10 @@ export const editarArtes = (req, res) => {
     id
   );
 
-  return res.send(arteAtualizada);
+  return res.send({
+    message: "Arte atualizada!",
+    arteAtualizada
+  });
 };
 export const deletarArte = (req, res) => {
   const { id } = req.params;
