@@ -1,8 +1,10 @@
 import React from 'react'
+import obras from '../src/data/quadros'
 
 function pageHome() {
   return (
     <div>
+      console.log(obras)
         <h1>Quadrinhos</h1>
  <div className='quadroMaior'>
     <div className='img'>
