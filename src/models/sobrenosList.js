@@ -1,31 +1,31 @@
-//Lista sobre nós com os integrantes
+export class SobreNosList{
+    constructor(){
+        this.integrantes = [];
+    }
 
-class sobreNos {
-    constructor() {
-        this.listIntegrantes = [] //criação do array
+    getIntegrantes(){
+        return this.integrantes;
     }
-    getTodosIntegrantes() {
-        return this.listIntegrantes;
-    }
-    getIntegrantesByid(id) {
-        return this.listIntegrantes.find((integrantes) => integrantes.id === id);
-    }
-    adicionarIntegrantes(integrantes) {
-        this.listIntegrantes.push(integrantes);
-    }
-    editarIntegrante(nome, idade, imagem) {
 
-        const integrantes = this.getIntegrantesByid(id)
-        if (integrantes) {
-            integrantes.nome = nome,
-            integrantes.idade = idade;
-            integrantes.imagem = imagem;
-            integrantes.id = uuidv4()
+    getIntegrantesPorId(id){
+        return this.integrantes.find((integrante) => integrante.id === id);
+    }
+
+    criarIntegrante(integrante){
+        this.integrantes.push(integrante);
+    }
+
+    editarIntegrante(id, nome, idade, imagem){
+        const integrante = this.getIntegrantesPorId(id);
+
+        if(integrante){
+            integrante.nome = nome;
+            integrante.idade = idade;
+            integrante.imagem = imagem;
         }
-        return integrantes
+        return integrante;
     }
-    deletarIntegrante(id) {
-        this.listIntegrantes = this.listIntegrantes.filter((integrantes) => integrantes.id != id)
+    deletarIntegrante(id){
+        this.integrantes = this.integrantes.filter((integrante) => integrante.id !== id);
     }
 }
-export default sobreNos;
