@@ -34,6 +34,8 @@ class GaleriaList {
       if (galeria) {
         this.galerias = this.galerias.filter((galeria) => galeria.id !== id);
       }
+
+      return galeria
     }
   }
   

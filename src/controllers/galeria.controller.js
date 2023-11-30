@@ -1,21 +1,21 @@
-import GaleriaList from "../models/ArteList.js";
-import Galeria from "../models/Galeria.js";
 import GaleriaList from "../models/GaleriaList.js";
+import Galeria from "../models/Galeria.js";
 
-const GaleriaList =new GaleriaList();
+
+const galeriaList =new GaleriaList();
 
 export const cadastrar = (req, res) => {
     const { nome, cidade, rua, numero } = req.body;
 
     const galeria = new Galeria(nome, cidade, rua, numero);
 
-    GaleriaList.cadastrar(galeria);
+    galeriaList.cadastrar(galeria);
 
     return res.status(201).send(galeria);
   }
 
 export const listar  = (req, res) => {
-    const galerias = GaleriaList.listar();
+    const galerias = galeriaList.listar();
 
     return res.status(200).send(galerias);
   }
@@ -23,7 +23,7 @@ export const listar  = (req, res) => {
 export const buscarPorId = (req, res) => {
     const { id } = req.params;
 
-    const galeria =  GaleriaList.buscarPorId(Number(id));
+    const galeria =  galeriaList.buscarPorId(Number(id));
 
     if (!galeria) {
       return res.status(404).send({ message: "Galeria não encontrado!" });
@@ -36,7 +36,7 @@ export const alterar = (req, res) => {
     const { id } = req.params;
     const { nome, cidade, rua, numero } = req.body;
 
-    const galeria = GaleriaList.alterar(Number(id), nome,  cidade, rua, numero);
+    const galeria = galeriaList.alterar(Number(id), nome,  cidade, rua, numero);
 
     if (!galeria) {
       return res.status(404).send({ message: "Galeria não encontrada!" });
@@ -48,13 +48,13 @@ export const alterar = (req, res) => {
 export const excluir = (req, res) => {
     const { id } = req.params;
 
-    const galeria = GaleriaList.buscarPorId(Number(id));
+    const galeria = galeriaList.excluir(Number(id));
 
     if (!galeria) {
       return res.status(404).send({ message: "Galeria não encontrada!" });
     }
 
-    GaleriaList.excluir(Number(id));
+    galeriaList.excluir(Number(id));
 
-    return res.status(204).send(galeria);
+    return res.status(200).send(galeria); 
   }
