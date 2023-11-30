@@ -1,7 +1,6 @@
 import GaleriaList from "../models/GaleriaList.js";
 import Galeria from "../models/Galeria.js";
 
-
 const galeriaList =new GaleriaList();
 
 export const cadastrar = (req, res) => {
