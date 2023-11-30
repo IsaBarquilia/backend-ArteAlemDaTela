@@ -12,7 +12,7 @@ export const getIntegrantes = (req , res) =>{
     return res.status(404).send({message:"Não há integrantes cadastrados"});
 };
 
-export const getIntegrante = (req, res) =>{
+export const getIntegrantePorId = (req, res) =>{
     const { id } = res.params;
     const integrante = sobrenosList.getIntegrantesPorId(id);
 
