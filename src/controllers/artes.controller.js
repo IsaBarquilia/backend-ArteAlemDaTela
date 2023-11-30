@@ -1,6 +1,20 @@
+
+import obras from "../data/quadros.js";
 import resgataArtes from "../models/ArteList.js"
 import Arte from "../models/arte.js"
+
 const arteLista = new resgataArtes()
+
+obras.map(arte => new Arte(
+  arte.nomeObra,
+  arte.url,
+  arte.idadeArtista,
+  arte.artista ,
+  arte.dataProducao,
+  arte.tipo,
+)) .forEach(obras => arteLista.criarArtes(obras));
+
+
 
 //Função de verificação de imagem
 function verifyImage(url) {
@@ -15,6 +29,8 @@ function verifyImage(url) {
 export const getTodasArtes = (req, res) => {
   const tipo = req.query.tipo;
   let artes;
+
+
 
   if (tipo) {
     artes = arteLista.buscarporTipo(tipo);
@@ -43,7 +59,7 @@ export const buscarArtePorID = (req, res) => {
   const { id } = req.params;
   const arte = arteLista.buscarArtePorID(id);
 
-  if(arte){
+  if (arte) {
     return res.status(200).send(arte);
   }
   else {
@@ -66,10 +82,10 @@ export const dataProducao = (req, res) => {
 };
 //Função de criar uma arte
 export const criarArtes = (req, res) => {
-  
+
   const { nomeObra, url, artista, dataProducao, tipo, idadeArtista } = req.body;
   const arte = new Arte(nomeObra, url, artista, dataProducao, tipo, idadeArtista)
-  
+
   let numerosErros = 0;
   let erros = [];
 
