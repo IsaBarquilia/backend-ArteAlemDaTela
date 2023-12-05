@@ -23,7 +23,7 @@ export const getIntegrantes = (req, res) => {
 export const getIntegrantePorId = (req, res) => {
     const { id } = req.params;
     const integrante = sobrenosList.getIntegrantesPorId(id);
-'
+
     if (!integrante) res.status(404).send({ message: "Integrante não encontrado" });
 
     return res.send(integrante);
