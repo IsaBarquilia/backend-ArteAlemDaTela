@@ -1,6 +1,4 @@
 
-
-import obras from "../data/quadros.js";
 import obras from "../data/obras.js";
 
 import resgataArtes from "../models/ArteList.js"
