@@ -84,7 +84,7 @@ export const dataProducao = (req, res) => {
 export const criarArtes = (req, res) => {
 
   const { nomeObra, url, artista, dataProducao, tipo, idadeArtista } = req.body;
-  const arte = new Arte(nomeObra, url, artista, dataProducao, tipo, idadeArtista)
+  const arte = new Arte (nomeObra, url, artista, dataProducao, tipo, idadeArtista)
 
   let numerosErros = 0;
   let erros = [];

@@ -36,4 +36,4 @@ const Artistas = [
     }
     
 ]
-export default Artistas
+export default Artistas;

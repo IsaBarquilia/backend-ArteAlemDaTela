@@ -5,6 +5,7 @@ export class SobreNosList{
 
     getIntegrantes(){
         return this.integrantes;
+
     }
 
     getIntegrantesPorId(id){
@@ -22,10 +23,11 @@ export class SobreNosList{
             integrante.nome = nome;
             integrante.idade = idade;
             integrante.imagem = imagem;
+           
         }
         return integrante;
     }
     deletarIntegrante(id){
-        this.integrantes = this.integrantes.filter((integrante) => integrante.id !== id);
+        this.integrantes = this.integrantes.filter((integrante) => integrante.id == id);
     }
 }

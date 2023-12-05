@@ -1,7 +1,19 @@
 import { SobreNosList } from "../models/sobrenosList.js";
 import { Sobrenos } from "../models/sobrenos.js";
+import Artistas from "../data/artistas.js";
 
 const sobrenosList = new SobreNosList();
+
+Artistas.map( sobrenos => {
+    const novoArtista = new Sobrenos(
+        sobrenos.nome,
+        sobrenos.idade,
+        sobrenos.imagem,
+    )
+sobrenosList.criarIntegrante(novoArtista)
+})
+
+
 
 function verifyImage(url) {
     var allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp'];
@@ -23,18 +35,17 @@ export const getIntegrantes = (req, res) => {
 export const getIntegrantePorId = (req, res) => {
     const { id } = req.params;
     const integrante = sobrenosList.getIntegrantesPorId(id);
-'
+
     if (!integrante) res.status(404).send({ message: "Integrante não encontrado" });
 
     return res.send(integrante);
 };
 
-export const criarIntegrante = (req, res) => {
+export const criarIntegrante = (req, res) => 
+{
     const { nome, idade, imagem } = req.body;
+
     
-
-
-
     if (nome == "" || idade == "" || imagem == ""){
         return res.status(400).send({message: "Preencha todos os campos"});
     }
@@ -50,8 +61,6 @@ export const criarIntegrante = (req, res) => {
         return res.status(400).send({message: "Idade minima 16 anos e maxima 117"});
      }
      const integrante = new Sobrenos(nome, idade, imagem);
-
-
         sobrenosList.criarIntegrante(integrante);
 
         return res.status(201).send(integrante);
