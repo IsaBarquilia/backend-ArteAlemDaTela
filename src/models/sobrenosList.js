@@ -8,6 +8,7 @@ export class SobreNosList{
 //Ele fornece acesso direto à lista de integrantes para visualização ou manipulação de suas informações.
     getIntegrantes(){
         return this.integrantes;
+
     }
 //esse método busca e retorna o integrante na lista integrantes cujo id corresponde exatamente ao id 
 //fornecido como parâmetro. Se nenhum integrante for encontrado com esse id, o método retorna undefined.
@@ -28,6 +29,7 @@ export class SobreNosList{
             integrante.nome = nome;
             integrante.idade = idade;
             integrante.imagem = imagem;
+           
         }
         return integrante;
     }
@@ -36,6 +38,6 @@ export class SobreNosList{
     //versão, resultando na exclusão do integrante específico com o id informado.
 
     deletarIntegrante(id){
-        this.integrantes = this.integrantes.filter((integrante) => integrante.id !== id);
+        this.integrantes = this.integrantes.filter((integrante) => integrante.id == id);
     }
 }

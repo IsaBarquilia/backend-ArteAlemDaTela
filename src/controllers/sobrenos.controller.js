@@ -1,13 +1,33 @@
+
+import { SobreNosList } from "../models/sobrenosList.js";
+import { Sobrenos } from "../models/sobrenos.js";
+import Artistas from "../data/artistas.js";
+
 import { SobreNosList } from "../models/sobrenosList.js"; //importaçao da pagina sobrenosList.js
 import { Sobrenos } from "../models/sobrenos.js"; //importaçao da pagina sobrenos.js
+
 
 //Esse trecho de código cria uma nova lista chamada sobrenosList que será usada para gerenciar informações sobre o "Sobre Nós".
 // Essa lista é controlada por meio dos métodos e propriedades da classe SobreNosList.
 const sobrenosList = new SobreNosList();
 
+
+Artistas.map( sobrenos => {
+    const novoArtista = new Sobrenos(
+        sobrenos.nome,
+        sobrenos.idade,
+        sobrenos.imagem,
+    )
+sobrenosList.criarIntegrante(novoArtista)
+})
+
+
+
+
 //essa função analisa a URL fornecida, identifica a extensão do arquivo na URL e verifica 
 //se essa extensão está na lista de extensões de imagem permitidas. Se estiver, retorna true; se não estiver, retorna false,
 // indicando se a URL corresponde a uma imagem com uma extensão permitida
+
 function verifyImage(url) {
     var allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp'];
   
@@ -40,14 +60,17 @@ export const getIntegrantePorId = (req, res) => {
     return res.send(integrante);
 };
 
+
+export const criarIntegrante = (req, res) => 
+{
+
 //essa função valida os dados recebidos, cria um novo integrante e o adiciona à lista de integrantes. 
 //Em seguida, retorna os detalhes desse integrante como resposta à requisição, indicando que a criação foi bem-sucedida.
 export const criarIntegrante = (req, res) => {
+
     const { nome, idade, imagem } = req.body;
+
     
-
-
-
     if (nome == "" || idade == "" || imagem == ""){
         return res.status(400).send({message: "Preencha todos os campos"});
     }
@@ -63,8 +86,6 @@ export const criarIntegrante = (req, res) => {
         return res.status(400).send({message: "Idade minima 16 anos e maxima 117"});
      }
      const integrante = new Sobrenos(nome, idade, imagem);
-
-
         sobrenosList.criarIntegrante(integrante);
 
         return res.status(201).send(integrante);
