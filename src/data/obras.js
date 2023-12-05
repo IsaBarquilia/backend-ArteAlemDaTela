@@ -1,7 +1,7 @@
 const obras =[
     {
         nomeObra: "Noite estrelada",
-        URL:"  https://static.todamateria.com.br/upload/an/oi/anoiteestrelada-cke.jpg",
+        url:"  https://static.todamateria.com.br/upload/an/oi/anoiteestrelada-cke.jpg",
         artista: "Van Vogh",
         dataProducao: "1889",
         tipo: "Oleo sobre tela",
@@ -12,7 +12,7 @@ const obras =[
 
     {
         nomeObra: "O Nascimento de Vênus",
-        URL:"https://www.infoescola.com/wp-content/uploads/2012/04/nascimento-de-venus-scaled.jpg",
+        url:"https://www.infoescola.com/wp-content/uploads/2012/04/nascimento-de-venus-scaled.jpg",
         artista: "Sandro Botticelli",
         dataProducao: "1485",
         tipo: "Pintura histórica",
@@ -22,7 +22,7 @@ const obras =[
 
     {
         nomeObra: "O grito.",
-        URL:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Edvard_Munch_-_The_Scream_-_Google_Art_Project.jpg/1200px-Edvard_Munch_-_The_Scream_-_Google_Art_Project.jpg",
+        url:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Edvard_Munch_-_The_Scream_-_Google_Art_Project.jpg/1200px-Edvard_Munch_-_The_Scream_-_Google_Art_Project.jpg",
         artista: "Edvard Munch",
         dataProducao: "1893",
         tipo: "Óleo sobre tela",
@@ -31,7 +31,7 @@ const obras =[
     },
     {
         nomeObra: "Ivan, o Terrível",
-        URL:"https://aventurasnahistoria.uol.com.br/media/_versions/capa_ivan_o_terrivel_pintura_filho_morto_historia_widelg.jpeg",
+        url:"https://aventurasnahistoria.uol.com.br/media/_versions/capa_ivan_o_terrivel_pintura_filho_morto_historia_widelg.jpeg",
         artista: "Ilia Repin",
         dataProducao: " 1883",
         tipo: " Pintura histórica",
@@ -42,7 +42,7 @@ const obras =[
 
     {
         nomeObra: "A persistência da memória",
-        URL:"https://cdn.culturagenial.com/imagens/persistencia-da-memoria-salvador-dali.jpg",
+        url:"https://cdn.culturagenial.com/imagens/persistencia-da-memoria-salvador-dali.jpg",
         artista: "Salvador Dali.",
         dataProducao: "1931",
         tipo: "Alegoria",
@@ -51,7 +51,7 @@ const obras =[
 
     {
         nomeObra: "Abaporu",
-        URL:"https://4.bp.blogspot.com/-DCRiGpFta4Y/WLMetsefC8I/AAAAAAAABHw/f7NYMWnFok8aV_JDssTw2rpanKe1sOOQACLcB/s1600/abaporu%2B-%2Bronperlim.com.br.jpg",
+        url:"https://4.bp.blogspot.com/-DCRiGpFta4Y/WLMetsefC8I/AAAAAAAABHw/f7NYMWnFok8aV_JDssTw2rpanKe1sOOQACLcB/s1600/abaporu%2B-%2Bronperlim.com.br.jpg",
         artista: "Tarsila do Amaral",
         dataProducao: "1928",
         tipo: "óleo sobre tela",
@@ -60,7 +60,7 @@ const obras =[
 
     {
         nomeObra: "Britto Garden",
-        URL:"https://www.mirabiledecor.com.br/media/catalog/product/cache/1/image/770x540/040ec09b1e35df139433887a97daa66f/0/0/00006pqd.jpg",
+        url:"https://www.mirabiledecor.com.br/media/catalog/product/cache/1/image/770x540/040ec09b1e35df139433887a97daa66f/0/0/00006pqd.jpg",
         artista: "Romero Britt",
         dataProducao: " 2000",
         tipo: " Pintura histórica",
@@ -69,7 +69,7 @@ const obras =[
 
     {
         nomeObra: "Impressão, nascer do sol",
-        URL:"https://arteeartistas.com.br/wp-content/uploads/2017/01/Impress%C3%A3o-Sol-Nascente.-Claude-Monet.jpg",
+        url:"https://arteeartistas.com.br/wp-content/uploads/2017/01/Impress%C3%A3o-Sol-Nascente.-Claude-Monet.jpg",
         artista: "Claude Monet",
         dataProducao: "1872",
         tipo: "Tinta a óleo ",
@@ -78,7 +78,7 @@ const obras =[
 
     {
         nomeObra: "Amendoeira em Flor",
-        URL:"https://i.pinimg.com/736x/85/96/08/859608c82b2c97a614607a259b77facf.jpg",
+        url:"https://i.pinimg.com/736x/85/96/08/859608c82b2c97a614607a259b77facf.jpg",
         artista: "Van gogh",
         dataProducao: " 1890",
         tipo: "Tinta a óleo ",
@@ -87,7 +87,7 @@ const obras =[
 
     {
         nomeObra: "Mona lisa",
-        URL:"https://www.otempo.com.br/image/contentid/policy:1.2010717:1559857715/Capturar-JPG.JPG?f=3x2&w=1224",
+        url:"https://www.otempo.com.br/image/contentid/policy:1.2010717:1559857715/Capturar-JPG.JPG?f=3x2&w=1224",
         artista: "Leonardo da vinci",
         dataProducao: " 1890",
         tipo: "Tinta a óleo ",
@@ -96,7 +96,7 @@ const obras =[
 
     {
         nomeObra: "Medusa",
-        URL:"https://i.pinimg.com/736x/66/f1/9b/66f19b6b209f80edbee693f425df368a.jpg",
+        url:"https://i.pinimg.com/736x/66/f1/9b/66f19b6b209f80edbee693f425df368a.jpg",
         artista: "Caravaggio",
         dataProducao: "  1503",
         tipo: "Tinta a óleo ",
