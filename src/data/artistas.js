@@ -1,3 +1,7 @@
+
+//É um conjunto de objetos representando artistas. Cada um tem propriedades como nome, idade e 
+//uma possível referência a uma imagem (URL vazia neste caso). 
+//Esses dados podem ser usados para trabalhar com informações sobre artistas em um programa.
 const Artistas = [
     {
         nome:"Isabela Alcântara",
@@ -36,4 +40,4 @@ const Artistas = [
     }
     
 ]
-export default Artistas
+export default Artistas;
