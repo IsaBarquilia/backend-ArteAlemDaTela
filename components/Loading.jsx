@@ -1,18 +1,11 @@
-import React from 'react'
-import styles from '../loading/loading.module.css'
-import Header from '../header/header';
-import Footer from '../footer/footer';
+import React from "react";
+import "./loading.gif";
 
-function ImageLoading() {
-
-    <Header/>
-    return (
-        <div id={styles.containerImgLoading}>
-                <img id={styles.image} src='/loading.gif' alt="Loading Image" />
-        </div>
-    )
+export default function LoadingSpinner() {
+  return (
+    <div className="loading-container">
+      <div className="loading-spinner">
+      </div>
+    </div>
+  );
 }
-
-<Footer/>
-
-export default ImageLoading;
