@@ -1,3 +1,6 @@
+//São informações detalhadas sobre obras de arte, incluindo nome da obra, imagem, artista, data de produção, tipo de obra e idade do artista. 
+//Estes dados estão organizados em um array chamado obras e são utilizados para exibir ou trabalhar com informações sobre as obras de arte em um programa ou sistema.
+
 const obras =[
     {
         nomeObra: "Noite estrelada",
