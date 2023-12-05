@@ -1,6 +1,5 @@
 
 import obras from "../data/obras.js";
-
 import resgataArtes from "../models/ArteList.js"
 import Arte from "../models/arte.js"
 

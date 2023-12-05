@@ -1,4 +1,4 @@
-const artistas = [
+const Artistas = [
     {
         nome:"Isabela Alcântara",
         idade:"17 anos de idade",
@@ -36,3 +36,4 @@ const artistas = [
     }
     
 ]
+export default Artistas
