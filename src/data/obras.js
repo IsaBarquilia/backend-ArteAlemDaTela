@@ -96,14 +96,60 @@ const obras =[
         tipo: "Tinta a óleo ",
         idadeArtista: "falecido com 67 anos",
     }, 
+/////////////////////
+    {
+        nomeObra: "Operários”",
+        url:"https://blog.grafittiartes.com.br/wp-content/uploads/2020/02/operarios.jpg",
+        artista: "Tarsila do Amaral",
+        dataProducao: "1933",
+        tipo: "óleo sobre tela",
+        idadeArtista: "falecido com 86 anos",
+    },
 
     {
-        nomeObra: "Medusa",
-        url:"https://i.pinimg.com/736x/66/f1/9b/66f19b6b209f80edbee693f425df368a.jpg",
-        artista: "Caravaggio",
-        dataProducao: "  1503",
+        nomeObra: "O Lavrador de Café",
+        url:"https://blog.grafittiartes.com.br/wp-content/uploads/2020/10/O-Lavrador-de-Caf%C3%A9.jpg",
+        artista: "Candido Portinari",
+        dataProducao: "1934",
+        tipo: " óleo sobre tela",
+        idadeArtista: "falecido com 58 anos",
+    },
+
+    {
+        nomeObra: "As Meninas",
+        url:"https://juorosco.files.wordpress.com/2019/02/90392779_o.jpg?w=736",
+        artista: "Diego Velázquez ",
+        dataProducao: "1656",
+        tipo: "Barroco ",
+        idadeArtista: "falecido com 61 anos",
+    },
+
+    {
+        nomeObra: "Samba",
+        url:"https://www.spescoladeteatro.org.br/wp-content/uploads/2022/01/pilula_samba_di_cavalcanti_destaque.jpg",
+        artista: "Di Cavalcanti",
+        dataProducao: " 1925 ",
+        tipo: " modernismo no Brasil",
+        idadeArtista: " falecido com 79 anos",
+    },
+
+    {
+        nomeObra: "Carregador de Flores",
+        url:"https://www.historiadasartes.com/wp-content/uploads/2016/04/m_carregador.jpg",
+        artista: "Diego Rivera",
+        dataProducao: "  1935",
         tipo: "Tinta a óleo ",
-        idadeArtista: "falecido com 38 anos",
+        idadeArtista: "falecido com 70 anos",
+    },
+
+    {
+        nomeObra: "A face da guerra",
+        url:"https://static.todamateria.com.br/upload/ob/ra/obras-de-salvador-dali-og.jpg",
+        artista: "Salvador Dalí",
+        dataProducao: " 1940 ",
+        tipo: " óleo sobre tela",
+        idadeArtista: "falecido com 84 anos",
+        
     },
 
 
