@@ -9,9 +9,9 @@ const arteLista = new resgataArtes()
 //mapea as artes
 obras.map(arte => new Arte(
   arte.nomeObra,
-  arte.url,
-  arte.idadeArtista,
+  arte.url, 
   arte.artista ,
+  arte.idadeArtista,
   arte.dataProducao,
   arte.tipo,
 
@@ -100,7 +100,7 @@ export const criarArtes = (req, res) => {
   let erros = [];
 
   //verificação de todos os campos preenchidos
-  if (nomeObra == "" || url == "" || artista == "" || dataProducao == "" || tipo == "" || idadeArtista == "") {
+  if (nomeObra == "" || url == "" || artista == "" ||idadeArtista == "" ||dataProducao == "" || tipo == "" ) {
     numerosErros++;
     erros.push("Campo obrigatório vazio!");
   }
