@@ -20,7 +20,7 @@ const obras = [
         dataProducao: "1485",
         tipo: "Pintura histórica",
         idadeArtista: "falecido com 37 anos",
-        descricao: "Noite Estrelada é uma obra-prima de Vincent van Gogh que captura a energia intensa e emocional do artista. A noite estrelada é representada de forma turbulenta e cativante, com ciprestes sinuosos e um céu estrelado vibrante. As pinceladas expressivas e as cores intensas destacam a singularidade do estilo de Van Gogh, enquanto a obra transmite uma sensação de movimento e emoção."
+        descricao:  "Pintada por Sandro Botticelli durante o Renascimento italiano, O Nascimento de Vênus é uma representação clássica do nascimento mitológico da deusa do amor e da beleza. A figura graciosa de Vênus emergindo do mar é retratada com delicadeza e harmonia, refletindo a influência da mitologia clássica e a busca pela perfeição estética."
     },
 
 
@@ -31,7 +31,7 @@ const obras = [
         dataProducao: "1893",
         tipo: "Óleo sobre tela",
         idadeArtista: "falecido com 37 anos",
-        descricao: "O Nascimento de Vênus é uma representação clássica do nascimento mitológico da deusa do amor e da beleza. A figura graciosa de Vênus emergindo do mar é retratada com delicadeza e harmonia, refletindo a influência da mitologia clássica e a busca pela perfeição estética."
+        descricao: "O Grito de Edvard Munch é uma obra expressionista que se destaca pela intensidade emocional e pela representação angustiante da condição humana. A figura central, com um rosto distorcido, parece gritar silenciosamente em meio a um cenário surreal. As cores vibrantes e as linhas ondulantes contribuem para a atmosfera perturbadora e visceral da obra."
     },
     {
         nomeObra: "Ivan, o Terrível",
@@ -40,6 +40,8 @@ const obras = [
         dataProducao: " 1883",
         tipo: " Pintura histórica",
         idadeArtista: "falecido com 86 anos",
+        descricao:  "Pintada por Ilia Repin, Ivan, o Terrível é uma obra que retrata o czar russo em um momento de introspecção e poder. A pintura histórica captura a personalidade complexa de Ivan IV, conhecido por seu reinado tumultuado. A expressão no rosto do czar e os detalhes da composição narram uma história rica em simbolismo e significado histórico."
+        
     },
 
 
@@ -51,6 +53,7 @@ const obras = [
         dataProducao: "1931",
         tipo: "Alegoria",
         idadeArtista: "falecido com 84 anos",
+        descricao:" Salvador Dalí desafia a percepção do tempo em A Persistência da Memória. Os relógios derretidos representam a fluidez do tempo e a relatividade da realidade. Esta obra surrealista é uma representação visual impactante que convida o espectador a refletir sobre a natureza efêmera do tempo."
     },
 
     {
@@ -60,6 +63,7 @@ const obras = [
         dataProducao: "1928",
         tipo: "óleo sobre tela",
         idadeArtista: "falecido com 86 anos",
+        descricao:"Criada por Tarsila do Amaral durante o movimento antropofágico brasileiro, Abaporu apresenta uma figura antropomórfica em um ambiente exótico. A obra reflete a fusão de influências modernistas e indígenas, destacando a identidade cultural única do Brasil."
     },
 
     {
@@ -69,6 +73,7 @@ const obras = [
         dataProducao: " 2000",
         tipo: " Pintura histórica",
         idadeArtista: "60 anos",
+        descricao:"Britto Garden de Romero Britto é uma explosão de cores e formas características da pop art contemporânea. A obra, criada em 2000, reflete o estilo vibrante e otimista do artista, com padrões geométricos e cores audaciosas que transmitem uma sensação de alegria e vitalidade."
     },
 
     {
@@ -78,6 +83,7 @@ const obras = [
         dataProducao: "1872",
         tipo: "Tinta a óleo ",
         idadeArtista: "falecido com 86 anos",
+        descricao:"Claude Monet, um dos principais artistas impressionistas, captura a atmosfera efêmera de um nascer de sol sobre a água em Impressão, Nascer do Sol. As pinceladas soltas e a paleta de cores suaves caracterizam a obra, que é uma representação emblemática do movimento impressionista"
     },
 
     {
@@ -87,6 +93,8 @@ const obras = [
         dataProducao: " 1890",
         tipo: "Tinta a óleo ",
         idadeArtista: "falecido com 37 anos",
+        descricao:"Van Gogh retrata a natureza com sua característica expressividade em Amendoeira em Flor. A obra, pintada em 1890, apresenta amendoeiras em flor com pinceladas vigorosas e cores vibrantes, refletindo a paixão do artista pela natureza."
+    
     },
 
     {
@@ -96,6 +104,7 @@ const obras = [
         dataProducao: " 1890",
         tipo: "Tinta a óleo ",
         idadeArtista: "falecido com 67 anos",
+        descricao:"Leonardo da Vinci eternizou a Mona Lisa com sua maestria técnica e habilidade de retratar a expressão humana. A enigmática mulher sorrindo, os detalhes meticulosos e a técnica sfumato contribuem para a aura misteriosa e atemporal desta obra-prima."
     },
     /////////////////////
     {
