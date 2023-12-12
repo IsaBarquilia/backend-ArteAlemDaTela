@@ -8,7 +8,7 @@ const obras =[
         artista: "Van Vogh",  
         idadeArtista: "falecido com 37 anos",
         dataProducao: "1889",
-        tipo: "Oleo sobre tela",
+        tipo: "Óleo sobre tela",
       
 
     },
@@ -62,13 +62,13 @@ const obras =[
         artista: "Tarsila do Amaral",
         idadeArtista: "falecido com 86 anos",
         dataProducao: "1928",
-        tipo: "óleo sobre tela",
+        tipo: "Óleo sobre tela",
         
     },
 
     {
         nomeObra: "Britto Garden",
-        url:"https://www.mirabiledecor.com.br/media/catalog/product/cache/1/image/770x540/040ec09b1e35df139433887a97daa66f/0/0/00006pqd.jpg",
+        url:"https://www.arteprints.com.br/wp-content/uploads/2014/09/Britto-Garden.jpg",
         artista: "Romero Britt", 
         idadeArtista: "60 anos",
         dataProducao: " 2000",
@@ -102,27 +102,27 @@ const obras =[
         artista: "Leonardo da vinci", 
           idadeArtista: "falecido com 67 anos",
         dataProducao: " 1890",
-        tipo: "Tinta a óleo ",
+        tipo: "Tinta a óleo",
      
     }, 
 /////////////////////
     {
-        nomeObra: "Operários”",
-        url:"https://blog.grafittiartes.com.br/wp-content/uploads/2020/02/operarios.jpg",
+        nomeObra: "Operários",
+        url:"https://upload.wikimedia.org/wikipedia/pt/1/16/Operarios.jpg",
         artista: "Tarsila do Amaral", 
           idadeArtista: "falecido com 86 anos",
         dataProducao: "1933",
-        tipo: "óleo sobre tela",
+        tipo: "Óleo sobre tela",
      
     },
 
     {
         nomeObra: "O Lavrador de Café",
-        url:"https://blog.grafittiartes.com.br/wp-content/uploads/2020/10/O-Lavrador-de-Caf%C3%A9.jpg",
+        url:"https://assets.masp.org.br/uploads/collection/k3Si2GZdIUf7aumoDG5TircajN5MRG8N.jpg",
         artista: "Candido Portinari",  
          idadeArtista: "falecido com 58 anos",
         dataProducao: "1934",
-        tipo: " óleo sobre tela",
+        tipo: "Óleo sobre tela",
      
     },
 
@@ -132,7 +132,7 @@ const obras =[
         artista: "Diego Velázquez ",   
          idadeArtista: "falecido com 61 anos",
         dataProducao: "1656",
-        tipo: "Barroco ",
+        tipo: "Barroco",
     
     },
 
@@ -142,7 +142,7 @@ const obras =[
         artista: "Di Cavalcanti", 
            idadeArtista: " falecido com 79 anos",
         dataProducao: " 1925 ",
-        tipo: " modernismo no Brasil",
+        tipo: "Modernismo no Brasil",
     
     },
 
@@ -162,11 +162,30 @@ const obras =[
         artista: "Salvador Dalí",  
         idadeArtista: "falecido com 84 anos",
         dataProducao: " 1940 ",
-        tipo: " óleo sobre tela",
+        tipo: " Óleo sobre tela",
       
         
     },
-
+    {
+        nomeObra: "Paint in Portugal",
+        url:"https://images.squarespace-cdn.com/content/v1/5377840fe4b0e8c9b2adf441/1543589584292-ONRV1KF8M7ELLNEDH9M0/PiP+-+Julia+B+-+Works",
+        artista: "Julia Barminova",  
+        idadeArtista: " 19 anos",
+        dataProducao: " 2012 ",
+        tipo: "Aquarela",
+      
+        
+    },
+    {
+        nomeObra: "Campos das flores coloridas",
+        url:"https://marcelosantosarte.com.br/wp-content/uploads/Produtos/Preview/Pintura/10-27-20-Preview-Campo-Flores-Coloridas.jpg",
+        artista: "Marcelo Santos",  
+        idadeArtista: " 53 anos",
+        dataProducao: " 2010 ",
+        tipo: "Aquarela",
+      
+        
+    },
 
 ];
 export default obras;
