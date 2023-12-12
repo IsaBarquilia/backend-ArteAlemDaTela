@@ -5,15 +5,15 @@ import Arte from "../models/arte.js"; //importaçao pagia obras js
 
 //cont responsavel em criar novas artes
 const arteLista = new resgataArtes()
-
 //mapea as artes
 obras.map(arte => new Arte(
   arte.nomeObra,
-  arte.url,
-  arte.idadeArtista,
-  arte.artista ,
-  arte.dataProducao,
+  arte.url, 
   arte.tipo,
+  arte.artista ,
+  arte.idadeArtista,
+  arte.dataProducao,
+  arte.descricao
 
 )) .forEach(obras => arteLista.criarArtes(obras));
 
@@ -30,10 +30,8 @@ function verifyImage(url) {
 
 //Função de obter todas as artes
 export const getTodasArtes = (req, res) => {
-  const tipo = req.query.tipo;
+  const tipo= req.query.tipo;
   let artes;
-
-
   //Se 'tipo' estiver presente nos parâmetros de consulta
   if (tipo) {
     artes = arteLista.buscarporTipo(tipo);
@@ -93,14 +91,14 @@ export const dataProducao = (req, res) => {
 //adiciona a arte a uma lista. Se houver algum erro nos dados, retorna uma mensagem indicando o problema.
 export const criarArtes = (req, res) => {
 
-  const { nomeObra, url, artista, dataProducao, tipo, idadeArtista } = req.body;
-  const arte = new Arte (nomeObra, url, artista, dataProducao, tipo, idadeArtista)
+  const { nomeObra, url, tipo,artista, idadeArtista , dataProducao , descricao} = req.body;
+  const arte = new Arte (nomeObra, url, tipo,artista, idadeArtista , dataProducao , descricao)
 
   let numerosErros = 0;
   let erros = [];
 
   //verificação de todos os campos preenchidos
-  if (nomeObra == "" || url == "" || artista == "" || dataProducao == "" || tipo == "" || idadeArtista == "") {
+  if (nomeObra == "" || url == "" || artista == "" ||idadeArtista == "" ||dataProducao == "" || tipo == "" || descricao == "") {
     numerosErros++;
     erros.push("Campo obrigatório vazio!");
   }
@@ -156,7 +154,7 @@ export const criarArtes = (req, res) => {
 
 export const editarArtes = (req, res) => {
   const { id } = req.params;
-  const { nomeObra, url, artista, dataProducao, tipo, idadeArtista } = req.body;
+  const { nomeObra, url, tipo,artista, idadeArtista , dataProducao , descricao} = req.body;
   const arteId = arteLista.buscarArtePorID(id);
 
   if (!arteId) {
@@ -165,12 +163,12 @@ export const editarArtes = (req, res) => {
 
   const arteAtualizada = arteLista.editarArtes(
     nomeObra,
-    url,
-    artista,
-    dataProducao,
+    url, 
     tipo,
+    artista ,
     idadeArtista,
-    id
+    dataProducao,
+    descricao ,
   );
 
   return res.send({
@@ -187,6 +185,6 @@ export const deletarArte = (req, res) => {
 
   if (!arte) res.status(404).send({ message: "Arte não encontrada!" });
 
-  arteLista.deletarArte(arte);
+  arteLista.deletarArte(id);
   return res.send({ message: "Arte removida com sucesso!" });
 };

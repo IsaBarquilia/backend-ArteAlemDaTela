@@ -7,7 +7,7 @@ class resgataArtes {
     //Este código cria uma classe chamada resgataArtes com um construtor que define uma propriedade chamada 
     //listArtes como um array vazio. Essa classe parece ser um ponto de partida para gerenciar uma lista de obras de arte, mas não apresenta funcionalidades específicas de manipulação de dados nessa lista.
     constructor() {
-        this.listArtes = []
+        this.listArtes = [];
     }
     //getTodasArtes() é um método dentro da classe resgataArtes que retorna o conteúdo da propriedade listArtes, que é um array. Esse método possibilita obter todas as obras de arte armazenadas 
     //nessa lista específica da instância da classe resgataArtes.
@@ -17,7 +17,7 @@ class resgataArtes {
     //esse método procura por uma obra de arte na lista listArtes com base no id fornecido e retorna essa obra de arte específica,
     // se encontrada. Caso contrário, retorna undefined.
     buscarArtePorID(id) {
-        return this.listArtes.find((artes) => artes.id === id);
+        return this.listArtes.find((artes) => artes.id == id);
     }
     //esse método criarArtes é responsável por adicionar uma nova obra de arte à lista
     // de obras existente na instância da classe resgataArtes.
@@ -31,12 +31,11 @@ class resgataArtes {
         const artes = this.buscarArtePorID(id)
         if (artes) {
             artes.nomeObra = nomeObra,
-                artes.url = url;
-            artes.artista = artista;
-            artes.dataProducao = dataProducao;
+            artes.url = url;
             artes.tipo = tipo;
+            artes.artista = artista;
             artes.idadeArtista = idadeArtista;
-
+            artes.dataProducao = dataProducao;
         }
         return artes
     }
@@ -44,17 +43,16 @@ class resgataArtes {
     // obras na lista e atualizando a propriedade listArtes para essa nova lista filtrada.
 
     deletarArte(id) {
+        // console.log("ARTELIST");
+        // console.log(id);
         this.listArtes = this.listArtes.filter((artes) => artes.id != id)
-    }
-//esse método busca e retorna todas as obras de arte na lista listArtes cujo
-//s nomes coincidem exatamente com o nome fornecido, ignorando diferenças de maiúsculas e minúsculas.
-    buscarporObra(nomeObra) {
-        return this.listArtes.filter((artes) => artes.nomeObra.toLowerCase() == nomeObra.toLowerCase());
     }
     //este método busca e retorna todas as obras de arte na lista listArtes cujos tipos correspondem exatamente ao tipo fornecido,
     // ignorando diferenças de maiúsculas e minúsculas.
     buscarporTipo(tipo) {
-        return this.listArtes.filter((artes) => artes.tipo.toLowerCase() == tipo.toLowerCase());
+        // console.log(tipo)
+        return this.listArtes.filter((obras) => obras.tipo == tipo);
     }
+
 }
 export default resgataArtes;

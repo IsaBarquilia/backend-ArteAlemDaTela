@@ -23,15 +23,15 @@ export class SobreNosList{
 // este método busca um integrante na lista por meio do id e, se encontrado, atualiza suas informações com os novos valores 
 //de nome, idade e imagem, retornando o integrante modificado ou undefined se o integrante não for localizado.
     editarIntegrante(id, nome, idade, imagem){
-        const integrante = this.getIntegrantesPorId(id);
+        const integrantes = this.getIntegrantesPorId(id);
 
         if(integrante){
-            integrante.nome = nome;
-            integrante.idade = idade;
-            integrante.imagem = imagem;
+            integrantes.nome = nome;
+            integrantes.idade = idade;
+            integrantes.imagem = imagem;
            
         }
-        return integrante;
+        return integrantes;
     }
     //ao chamar esse método com um determinado id, ele remove o integrante correspondente a esse id da lista 
     //integrantes, mantendo todos os outros integrantes na lista, e atualiza a lista integrantes com essa nova 
