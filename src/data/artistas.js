@@ -2,7 +2,7 @@
 //É um conjunto de objetos representando artistas (que se refere aos programadores do site). Cada um tem propriedades como nome, idade e 
 //uma possível referência a uma imagem (URL vazia neste caso). 
 //Esses dados podem ser usados para trabalhar com informações sobre artistas em um programa.
-const Artistas = [
+const integrantes = [
     {
         nome:"Isabela Alcântara",
         idade:"17 anos de idade",
@@ -46,4 +46,4 @@ const Artistas = [
     }
     
 ]
-export default Artistas;
+export default integrantes;
