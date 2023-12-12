@@ -7,7 +7,7 @@ class resgataArtes {
     //Este código cria uma classe chamada resgataArtes com um construtor que define uma propriedade chamada 
     //listArtes como um array vazio. Essa classe parece ser um ponto de partida para gerenciar uma lista de obras de arte, mas não apresenta funcionalidades específicas de manipulação de dados nessa lista.
     constructor() {
-        this.listArtes = []
+        this.listArtes = [];
     }
     //getTodasArtes() é um método dentro da classe resgataArtes que retorna o conteúdo da propriedade listArtes, que é um array. Esse método possibilita obter todas as obras de arte armazenadas 
     //nessa lista específica da instância da classe resgataArtes.
