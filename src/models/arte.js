@@ -3,13 +3,14 @@
 
 import {v4 as uuidv4 }from "uuid"
 class Arte{
-    constructor(nomeObra, url, artista, dataProducao, tipo, idadeArtista){
+    constructor(nomeObra, url,  tipo ,artista, idadeArtista, dataProducao){
         this.nomeObra =nomeObra, 
         this.url =url;
-        this.idadeArtista=idadeArtista; 
-        this.artista =artista;
-        this.dataProducao=dataProducao;
         this.tipo = tipo;
+        this.artista =artista;
+        this.idadeArtista=idadeArtista; 
+        this.dataProducao=dataProducao;
+     
         this.id=uuidv4()
     }
 }
