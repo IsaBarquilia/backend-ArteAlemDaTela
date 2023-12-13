@@ -90,7 +90,6 @@ export const dataProducao = (req, res) => {
 //comprimento do texto, idade do artista, tamanho do texto e se a URL da imagem é válida. Se tudo estiver certo, 
 //adiciona a arte a uma lista. Se houver algum erro nos dados, retorna uma mensagem indicando o problema.
 export const criarArtes = (req, res) => {
-
   const { nomeObra, url, tipo,artista, idadeArtista , dataProducao , descricao} = req.body;
   const arte = new Arte (nomeObra, url, tipo,artista, idadeArtista , dataProducao , descricao)
 
@@ -162,19 +161,19 @@ export const editarArtes = (req, res) => {
   }
 
   const arteAtualizada = arteLista.editarArtes(
-    nomeObra,
+    nomeObra, 
     url, 
-    tipo,
-    artista ,
-    idadeArtista,
-    dataProducao,
-    descricao ,
+    artista, 
+    dataProducao, 
+    tipo, 
+    idadeArtista, 
+    id
   );
-
+  console.log(editarArtes)
   return res.send({
-    message: "Arte atualizada!",
     arteAtualizada
   });
+
 };
 
 //Essa função busca a arte pelo ID fornecido. Se a arte é encontrada, ela é removida da lista de artes e uma mensagem confirmando a remoção é enviada como resposta. Se a arte não é encontrada, 

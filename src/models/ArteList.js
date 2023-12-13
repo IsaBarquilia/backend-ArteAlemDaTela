@@ -26,18 +26,24 @@ class resgataArtes {
     }
     //O método `editarArtes` da classe `resgataArtes` procura por uma obra de arte na lista `listArtes` 
     //com base no `id` fornecido. Se a obra é encontrada, ele atualiza suas propriedades com os novos valores passados como parâmetros para o método, como nome,
-    // URL, artista, data de produção, tipo e idade do artista.
+    // URL, artista, data de produção, tipo e idade do artista
     editarArtes(nomeObra, url, artista, dataProducao, tipo, idadeArtista, id) {
-        const artes = this.buscarArtePorID(id)
-        if (artes) {
-            artes.nomeObra = nomeObra,
-            artes.url = url;
-            artes.tipo = tipo;
-            artes.artista = artista;
-            artes.idadeArtista = idadeArtista;
-            artes.dataProducao = dataProducao;
-        }
-        return artes
+        console.log(nomeObra, url, artista, dataProducao, tipo, idadeArtista, id)
+        console.log(this.artes)
+        this.listArtes = this.listArtes.map(arte => {
+
+            if (arte.id == id) {
+                arte.nomeObra = nomeObra;
+                arte.url = url;
+                arte.artista = artista;
+                arte.dataProducao = dataProducao;
+                arte.tipo = tipo;
+                arte.idadeArtista = idadeArtista;
+            }
+            return arte;
+        
+        })
+        return this.buscarArtePorID(id);
     }
     //esse método remove da lista listArtes a obra de arte que possui o id fornecido, mantendo todas as outras
     // obras na lista e atualizando a propriedade listArtes para essa nova lista filtrada.
