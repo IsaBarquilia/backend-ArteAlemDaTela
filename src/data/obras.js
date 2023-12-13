@@ -7,12 +7,9 @@ const obras = [
         url: "  https://static.todamateria.com.br/upload/an/oi/anoiteestrelada-cke.jpg",
         artista: "Van Vogh",
         idadeArtista: "falecido com 37 anos",
-        descricao: "Noite Estrelada é uma icônica obra de Van Gogh que retrata um céu noturno estrelado com um turbilhão de cores e formas. A pintura reflete a intensidade emocional do artista. O Nascimento de Vênus."
-
+        descricao: "A obra Noite Estrelada é uma das pinturas mais icônicas de Vincent van Gogh, criada em 1889. Nela, o artista retrata uma paisagem noturna vibrante e imaginativa, onde o céu se funde em um turbilhão de cores intensas e ondulantes. As estrelas dançam sobre a pequena vila, enquanto ciprestes parecem se contorcer em movimentos sinuosos. Esta obra-prima expressa a intensidade emocional de van Gogh e sua conexão única com a natureza. A combinação de tons azuis profundos e amarelos vibrantes cria uma atmosfera envolvente e emocional, revelando a busca do artista pela beleza além da realidade visível. A Noite Estrelada é um testemunho duradouro da genialidade e da alma atormentada de van Gogh, que transcende o tempo, continuando a cativar e inspirar gerações.",
         dataProducao: "1889",
         tipo: "Óleo sobre tela",
-    
-
     },
 
     {
@@ -21,10 +18,9 @@ const obras = [
         artista: "Sandro Botticelli",
         idadeArtista: "falecido com 37 anos",
         dataProducao: "1485",
-        tipo: "Pintura histórica",
-
+        tipo: "Pintura histórica", 
         idadeArtista: "falecido com 37 anos",
-        descricao:  "Pintada por Sandro Botticelli durante o Renascimento italiano, O Nascimento de Vênus é uma representação clássica do nascimento mitológico da deusa do amor e da beleza. A figura graciosa de Vênus emergindo do mar é retratada com delicadeza e harmonia, refletindo a influência da mitologia clássica e a busca pela perfeição estética."
+        descricao: "O Nascimento de Vênus é uma das obras-primas mais famosas de Sandro Botticelli, datada de meados dos anos 1480. Esta pintura renascentista retrata o momento mítico do nascimento da deusa Vênus, emergindo graciosa e completamente formada do mar em uma concha. A figura da deusa, representada de maneira serena e elegante, é um símbolo de beleza e perfeição clássica. Botticelli habilmente captura a harmonia entre a figura feminina e a natureza circundante, utilizando cores suaves e formas delicadas. Esta obra não apenas representa um momento mitológico, mas também encapsula a reverência pela estética clássica e pela feminilidade idealizada, tornando-se um ícone duradouro da arte renascentista italiana."
 
     },
 
@@ -36,7 +32,6 @@ const obras = [
         idadeArtista: "falecido com 37 anos",
         dataProducao: "1893",
         tipo: "Óleo sobre tela",
-
         idadeArtista: "falecido com 37 anos",
         descricao: "O Grito de Edvard Munch é uma obra expressionista que se destaca pela intensidade emocional e pela representação angustiante da condição humana. A figura central, com um rosto distorcido, parece gritar silenciosamente em meio a um cenário surreal. As cores vibrantes e as linhas ondulantes contribuem para a atmosfera perturbadora e visceral da obra."
 
@@ -50,8 +45,8 @@ const obras = [
         tipo: " Pintura histórica",
 
         idadeArtista: "falecido com 86 anos",
-        descricao:  "Pintada por Ilia Repin, Ivan, o Terrível é uma obra que retrata o czar russo em um momento de introspecção e poder. A pintura histórica captura a personalidade complexa de Ivan IV, conhecido por seu reinado tumultuado. A expressão no rosto do czar e os detalhes da composição narram uma história rica em simbolismo e significado histórico."
-        
+        descricao: "Pintada por Ilia Repin, Ivan, o Terrível é uma obra que retrata o czar russo em um momento de introspecção e poder. A pintura histórica captura a personalidade complexa de Ivan IV, conhecido por seu reinado tumultuado. A expressão no rosto do czar e os detalhes da composição narram uma história rica em simbolismo e significado histórico."
+
 
     },
 
@@ -66,7 +61,7 @@ const obras = [
         tipo: "Alegoria",
 
         idadeArtista: "falecido com 84 anos",
-        descricao:" Salvador Dalí desafia a percepção do tempo em A Persistência da Memória. Os relógios derretidos representam a fluidez do tempo e a relatividade da realidade. Esta obra surrealista é uma representação visual impactante que convida o espectador a refletir sobre a natureza efêmera do tempo."
+        descricao: " Salvador Dalí desafia a percepção do tempo em A Persistência da Memória. Os relógios derretidos representam a fluidez do tempo e a relatividade da realidade. Esta obra surrealista é uma representação visual impactante que convida o espectador a refletir sobre a natureza efêmera do tempo."
 
     },
 
@@ -76,8 +71,7 @@ const obras = [
         artista: "Tarsila do Amaral",
         idadeArtista: "falecido com 86 anos",
 
-        descricao:"Criada por Tarsila do Amaral durante o movimento antropofágico brasileiro, Abaporu apresenta uma figura antropomórfica em um ambiente exótico. A obra reflete a fusão de influências modernistas e indígenas, destacando a identidade cultural única do Brasil."
-
+        descricao: "Criada por Tarsila do Amaral durante o movimento antropofágico brasileiro, Abaporu apresenta uma figura antropomórfica em um ambiente exótico. A obra reflete a fusão de influências modernistas e indígenas, destacando a identidade cultural única do Brasil.",
         dataProducao: "1928",
 
         tipo: "Óleo sobre tela",
@@ -93,11 +87,9 @@ const obras = [
         dataProducao: " 2000",
         tipo: " Pintura histórica",
         idadeArtista: "60 anos",
-        descricao:"Britto Garden de Romero Britto é uma explosão de cores e formas características da pop art contemporânea. A obra, criada em 2000, reflete o estilo vibrante e otimista do artista, com padrões geométricos e cores audaciosas que transmitem uma sensação de alegria e vitalidade."
-
-
-        url:"https://www.arteprints.com.br/wp-content/uploads/2014/09/Britto-Garden.jpg",
-        artista: "Romero Britt", 
+        descricao: "Britto Garden de Romero Britto é uma explosão de cores e formas características da pop art contemporânea. A obra, criada em 2000, reflete o estilo vibrante e otimista do artista, com padrões geométricos e cores audaciosas que transmitem uma sensação de alegria e vitalidade.",
+        url: "https://www.arteprints.com.br/wp-content/uploads/2014/09/Britto-Garden.jpg",
+        artista: "Romero Britt",
 
         idadeArtista: "60 anos",
         dataProducao: " 2000",
@@ -114,7 +106,7 @@ const obras = [
         tipo: "Tinta a óleo ",
 
         idadeArtista: "falecido com 86 anos",
-        descricao:"Claude Monet, um dos principais artistas impressionistas, captura a atmosfera efêmera de um nascer de sol sobre a água em Impressão, Nascer do Sol. As pinceladas soltas e a paleta de cores suaves caracterizam a obra, que é uma representação emblemática do movimento impressionista"
+        descricao: "Claude Monet, um dos principais artistas impressionistas, captura a atmosfera efêmera de um nascer de sol sobre a água em Impressão, Nascer do Sol. As pinceladas soltas e a paleta de cores suaves caracterizam a obra, que é uma representação emblemática do movimento impressionista"
 
 
 
@@ -129,8 +121,8 @@ const obras = [
         tipo: "Tinta a óleo ",
 
         idadeArtista: "falecido com 37 anos",
-        descricao:"Van Gogh retrata a natureza com sua característica expressividade em Amendoeira em Flor. A obra, pintada em 1890, apresenta amendoeiras em flor com pinceladas vigorosas e cores vibrantes, refletindo a paixão do artista pela natureza."
-    
+        descricao: "Van Gogh retrata a natureza com sua característica expressividade em Amendoeira em Flor. A obra, pintada em 1890, apresenta amendoeiras em flor com pinceladas vigorosas e cores vibrantes, refletindo a paixão do artista pela natureza."
+
 
 
     },
@@ -141,9 +133,9 @@ const obras = [
         artista: "Leonardo da vinci",
         idadeArtista: "falecido com 67 anos",
 
-        descricao:"Leonardo da Vinci eternizou a Mona Lisa com sua maestria técnica e habilidade de retratar a expressão humana. A enigmática mulher sorrindo, os detalhes meticulosos e a técnica sfumato contribuem para a aura misteriosa e atemporal desta obra-prima."
+        descricao: "Leonardo da Vinci eternizou a Mona Lisa com sua maestria técnica e habilidade de retratar a expressão humana. A enigmática mulher sorrindo, os detalhes meticulosos e a técnica sfumato contribuem para a aura misteriosa e atemporal desta obra-prima."
     },
-  
+
     {
         nomeObra: "Operários”",
         url: "https://blog.grafittiartes.com.br/wp-content/uploads/2020/02/operarios.jpg",
@@ -152,19 +144,19 @@ const obras = [
         dataProducao: " 1890",
 
         tipo: "Tinta a óleo",
-     
-    }, 
+
+    },
 
     {
         nomeObra: "Operários",
-        url:"https://upload.wikimedia.org/wikipedia/pt/1/16/Operarios.jpg",
-        artista: "Tarsila do Amaral", 
-          idadeArtista: "falecido com 86 anos",
+        url: "https://upload.wikimedia.org/wikipedia/pt/1/16/Operarios.jpg",
+        artista: "Tarsila do Amaral",
+        idadeArtista: "falecido com 86 anos",
 
         dataProducao: "1933",
         tipo: "Óleo sobre tela",
 
-  
+    },
     {
         nomeObra: "O Lavrador de Café",
 
@@ -172,9 +164,9 @@ const obras = [
         artista: "Candido Portinari",
 
 
-        url:"https://assets.masp.org.br/uploads/collection/k3Si2GZdIUf7aumoDG5TircajN5MRG8N.jpg",
-        artista: "Candido Portinari",  
-         idadeArtista: "falecido com 58 anos",
+        url: "https://assets.masp.org.br/uploads/collection/k3Si2GZdIUf7aumoDG5TircajN5MRG8N.jpg",
+        artista: "Candido Portinari",
+        idadeArtista: "falecido com 58 anos",
 
         dataProducao: "1934",
         tipo: "Óleo sobre tela",
@@ -189,7 +181,7 @@ const obras = [
         dataProducao: "1656",
 
         tipo: "Barroco",
-    
+
 
     },
 
@@ -222,23 +214,23 @@ const obras = [
 
         dataProducao: " 1940 ",
         tipo: " Óleo sobre tela",
-      
-        
+
+
     },
     {
         nomeObra: "Paint in Portugal",
-        url:"https://images.squarespace-cdn.com/content/v1/5377840fe4b0e8c9b2adf441/1543589584292-ONRV1KF8M7ELLNEDH9M0/PiP+-+Julia+B+-+Works",
-        artista: "Julia Barminova",  
+        url: "https://images.squarespace-cdn.com/content/v1/5377840fe4b0e8c9b2adf441/1543589584292-ONRV1KF8M7ELLNEDH9M0/PiP+-+Julia+B+-+Works",
+        artista: "Julia Barminova",
         idadeArtista: " 19 anos",
         dataProducao: " 2012 ",
         tipo: "Aquarela",
-      
+
 
     },
     {
         nomeObra: "Campos das flores coloridas",
-        url:"https://marcelosantosarte.com.br/wp-content/uploads/Produtos/Preview/Pintura/10-27-20-Preview-Campo-Flores-Coloridas.jpg",
-        artista: "Marcelo Santos",  
+        url: "https://marcelosantosarte.com.br/wp-content/uploads/Produtos/Preview/Pintura/10-27-20-Preview-Campo-Flores-Coloridas.jpg",
+        artista: "Marcelo Santos",
         idadeArtista: " 53 anos",
         dataProducao: " 2010 ",
         tipo: "Aquarela",
